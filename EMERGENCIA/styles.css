@@ -1,0 +1,470 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Fondo animado */
+body {
+    background-image: repeating-linear-gradient(
+        -45deg,
+        #ffe6f0 0px,
+        #ffe6f0 100px,
+        #ffffff 100px,
+        #ffffff 200px
+    );
+    background-size: 400% 400%;
+    animation: diagonal-scroll 15s linear infinite;
+}
+
+
+@keyframes diagonal-scroll {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -500px -500px;
+    }
+}
+
+/* Barra de navegación */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1.5em 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2em;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffe6f0;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Menú responsivo */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.9);
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100%;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-links li {
+        margin-top: 1em;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+}
+
+/* Animaciones para secciones */
+section {
+    padding: 6em 2em;
+    text-align: center;
+    animation: fadeInUp 1.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ /*--------------------------------------------*/
+
+.animate-card {
+      transition: transform 0.5s ease, box-shadow 0.3s ease;
+  }
+  .animate-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 15px rgba(255, 105, 180, 0.5);
+  }
+  
+  /* Tarjetas sobre nosotros */
+  .sobre-nosotros {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+      background-color: #f7f7f7;
+  }
+  .tarjeta {
+      width: 240px;
+      cursor: pointer;
+  }
+  .tarjeta .info {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+  }
+  .tarjeta.active .info {
+      max-height: 200px;
+      padding: 15px;
+  }
+  .title-line {
+      position: relative;
+  }
+  .title-line::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background: #ff6b6b;
+      bottom: -5px;
+      left: 0;
+      animation: line-animation 1s forwards;
+  }
+  @keyframes line-animation {
+      0% { width: 0; }
+      100% { width: 100%; }
+  }
+  /*--------------------------------------------*/
+ 
+
+.gatos-populares {
+      display: flex;
+      align-items: center;
+      padding: 40px 0;
+      background-color: #f7f7f7;
+  }
+  
+  .gatos-imagen {
+      flex: 1;
+      background-color: #ddd; /* Color de fondo de las imágenes de placeholder */
+      
+  }
+  
+  .imagen-izquierda img, .imagen-derecha img {
+      width: 100%;
+      height: auto;
+      display: block;
+  }
+  
+  .contenido {
+      flex: 2;
+      padding: 0 20px;
+      text-align: left;
+  }
+  
+  .gatos-populares h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #333;
+  }
+  
+  .gatos-populares p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 20px;
+  }
+  
+  .gatos-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  
+  .gato-item {
+      display: flex;
+      align-items: center;
+  }
+  
+  .icono {
+      font-size: 1.5rem;
+      color: #ff6b6b; /* Color para el icono de la pata */
+      margin-right: 15px;
+  }
+  
+  .texto h3 {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #333;
+  }
+  
+  .texto p {
+      font-size: 0.9rem;
+      color: #555;
+      margin: 5px 0;
+  }
+  
+  .texto a {
+      color: #ff6b6b;
+      text-decoration: none;
+      font-weight: bold;
+  }
+  
+  .texto a:hover {
+      text-decoration: underline;
+  }
+  
+
+/* Sección Juegos */
+.juegos-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    animation: fadeIn 2s ease forwards;
+}
+
+.juego {
+    background: #f5a2bc;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(255, 6, 205, 0.3);
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+}
+
+.juego:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sección Historias */
+.historias-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.historia {
+    background: #ffdde1;
+    padding: 1.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.historia:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+.creadores-section {
+      background-image: url('ruta/a/tu/imagen_de_rayas_rosas.png'); /* Cambia la ruta a donde tengas la imagen */
+      background-size: cover;
+      background-repeat: repeat;
+      padding: 50px 0;
+      color: #fff; /* Texto blanco para contrastar */
+      text-align: center;
+  }
+  
+  .creadores-section h2 {
+      font-size: 2.5rem;
+      color: #1e1d1d;
+      margin-bottom: 20px;
+  }
+  
+  .creadores-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+  }
+  
+  .creador-card {
+      background-color: rgba(230, 149, 191, 0.8); /* Fondo semitransparente oscuro */
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      color: #fff;
+      position: relative;
+      text-align: left;
+  }
+  
+  .creador-card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #e8e5e5; /* Texto ligeramente gris */
+  }
+  
+  .creador-card .creador-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  
+  .creador-card .creador-info img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #999;
+  }
+  
+  .creador-card .creador-info .creador-nombre {
+      font-weight: bold;
+      color: #ffd700; 
+  }
+  
+  .creador-card .creador-info .creador-titulo {
+      font-size: 0.9rem;
+      color: #ffffff;
+  }
+  
+  .creador-button {
+      background-color: #e63db6;
+      border: none;
+      color: #f2e6e6;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+  }
+  
+/*NO  TOCAR/
+/* Pie de página */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    animation: fadeInUp 1.5s ease;
+}
+
+/* Animaciones personalizadas */
+.animate-card {
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.animate-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.animate-list {
+    animation: slideIn 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Hero section styling */
+.hero {
+    height: 100vh;
+    display: flex;
+    background: linear-gradient(to right, #ffe6f0, #f5c6d0);
+}
+
+/* Ajustes responsivos para el texto del Hero */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+}
+
+/* Fondo de la Sección Hero */
+.bg-hero-pattern {
+    background: linear-gradient(135deg, #312e2e, #390c1a);
+    height: 100vh;
+    color: white;
+}
+
+/* Animaciones adicionales */
+.animate-btn {
+    transition: transform 0.3s ease;
+}
+
+.animate-btn:hover {
+    transform: scale(1.1);
+}
+
+.animate-scale {
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.animate-scale:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+

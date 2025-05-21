@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergencia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">Paraíso Gatuno</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#razas">Razas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#juegos">Juegos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#historias">Historias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero text-center text-light d-flex align-items-center justify-content-center">
+        <div class="container">
+            <h2 class="display-4">¡Bienvenido a Paraíso Gatuno!</h2>
+            <p class="lead">Explora el maravilloso mundo de los gatos.</p>
+        </div>
+    </section>
+
+    <section id="nosotros" class="seccion-nosotros py-5">
+      <div class="container text-center">
+          <h2>Sobre Nosotros</h2>
+          <p>En Paraíso Gatuno, amamos a los gatos. Nuestro objetivo es crear una comunidad para los amantes de
+              los felinos.</p>
+          <div class="row mt-4">
+              <div class="col-md-4">
+                  <div class="card p-3 animate-card">
+                      <h3>Misión</h3>
+                      <p>Fomentar el amor y cuidado responsable de los gatos.</p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card p-3 animate-card">
+                      <h3>Visión</h3>
+                      <p>Ser la comunidad número uno para los amantes de los gatos.</p>
+                  </div>
+              </div>
+              <div class="col-md-4">
+                  <div class="card p-3 animate-card">
+                      <h3>Valores</h3>
+                      <p>Compromiso, respeto y responsabilidad con el cuidado felino.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+  <section class="sobre-nosotros">
+      <div class="tarjeta" onclick="toggleInfo(this)">
+          <div class="imagen">
+              <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Imagen 1" width="200px">
+              <div class="fecha">03<br>Abr</div>
+          </div>
+          <div class="info">
+              <h3>Equipo Innovador</h3>
+              <p>Con años de experiencia, nuestro equipo trabaja con pasión y compromiso para brindar lo mejor.</p>
+          </div>
+      </div>
+      <div class="tarjeta" onclick="toggleInfo(this)">
+          <div class="imagen">
+              <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Imagen 2" width="200px">
+              <div class="fecha">02<br>Abr</div>
+          </div>
+          <div class="info">
+              <h3>Historia y Valores</h3>
+              <p>Nuestra historia se basa en valores sólidos que nos guían hacia un futuro prometedor.</p>
+          </div>
+      </div>
+      <div class="tarjeta" onclick="toggleInfo(this)">
+          <div class="imagen">
+              <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Imagen 3" width="200px">
+              <div class="fecha">01<br>Abr</div>
+          </div>
+          <div class="info">
+              <h3>Compromiso con la Calidad</h3>
+              <p>Nos esforzamos constantemente para ofrecer productos y servicios de la mejor calidad.</p>
+          </div>
+      </div>
+  </section>
+  
+
+
+
+  <section id="razas" class="seccion-razas py-5 bg-light">
+      <div class="container text-center">
+          <h2 class="title-line">Razas Populares</h2>
+          <div class="row mt-4">
+              <div class="col-md-4">
+                  <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Persa" class="img-fluid rounded-circle">
+                  <h3>Gato Persa</h3>
+                  <p>De pelaje largo y temperamento dulce.</p>
+              </div>
+              <div class="col-md-4">
+                  <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Siamés" class="img-fluid rounded-circle">
+                  <h3>Gato Siamés</h3>
+                  <p>Elegante, cariñoso y vocal.</p>
+              </div>
+              <div class="col-md-4">
+                  <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Maine Coon" class="img-fluid rounded-circle">
+                  <h3>Gato Maine Coon</h3>
+                  <p>Grande y cariñoso, ideal para familias.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <section class="gatos-populares">
+      <div class="gatos-imagen imagen-izquierda">
+          <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Gatos Populares Izquierda">
+      </div>
+      <div class="contenido">
+          <h2>Gatos Populares</h2>
+          <p>Descubre las razas de gatos más queridas y admiradas. Cada gato tiene su personalidad única y encanto.</p>
+          <div class="gatos-lista">
+              <div class="gato-item">
+                  <div class="icono">🐾</div>
+                  <div class="texto">
+                      <h3>Gato Persa</h3>
+                      <p>Conocido por su hermoso pelaje largo y su carácter dulce y calmado, el gato persa es ideal para el hogar.</p>
+                      <a href="#">Leer más »</a>
+                  </div>
+              </div>
+              <div class="gato-item">
+                  <div class="icono">🐾</div>
+                  <div class="texto">
+                      <h3>Gato Siamés</h3>
+                      <p>Elegante y vocal, el gato siamés tiene una personalidad vibrante y una gran curiosidad.</p>
+                      <a href="#">Leer más »</a>
+                  </div>
+              </div>
+              <div class="gato-item">
+                  <div class="icono">🐾</div>
+                  <div class="texto">
+                      <h3>Gato Maine Coon</h3>
+                      <p>El Maine Coon es conocido por su tamaño imponente y su naturaleza amigable y cariñosa.</p>
+                      <a href="#">Leer más »</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="gatos-imagen imagen-derecha">
+          <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Gatos Populares Derecha">
+      </div>
+  </section>
+  
+
+
+    <section id="juegos" class="seccion-juegos py-5">
+        <div class="container text-center">
+            <h2>Juegos Interactivos</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card p-3 animate-scale">
+                        <h3>Juego 1</h3>
+                        <p>Explora el mundo de juegos para gatos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 animate-scale">
+                        <h3>Juego 2</h3>
+                        <p>Encuentra entretenimiento gatuno.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 animate-scale">
+                        <h3>Juego 3</h3>
+                        <p>Desafíos para los amantes de gatos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="historias" class="seccion-historias py-5 bg-light">
+        <div class="container text-center">
+            <h2>Historias de Gatos</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card p-3 animate-bounce">
+                        <h3>Historia 1</h3>
+                        <p>Relato encantador de un felino.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 animate-bounce">
+                        <h3>Historia 2</h3>
+                        <p>Una amistad especial.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-3 animate-bounce">
+                        <h3>Historia 3</h3>
+                        <p>Aventuras de un gato explorador.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="creadores-section">
+      <h2>Conoce a los Creadores</h2>
+      <div class="creadores-cards">
+          <div class="creador-card">
+              <p>Aliquet ullamcorper vivamus a metus nullam arcu dui augue nisl pulvinar sit amet hendrerit commodo.</p>
+              <div class="creador-info">
+                  <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Foto de A. Doe">
+                  <div>
+                      <div class="creador-nombre">A. Doe</div>
+                      <div class="creador-titulo">CEO / Nombre de la Compañía</div>
+                  </div>
+              </div>
+          </div>
+          <div class="creador-card">
+              <p>Sed iaculis metus pede feugiat ante quisque mi curabitur lectus in molestie sed consectetur.</p>
+              <div class="creador-info">
+                  <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Foto de B. Doe">
+                  <div>
+                      <div class="creador-nombre">B. Doe</div>
+                      <div class="creador-titulo">Director / Nombre de la Compañía</div>
+                  </div>
+              </div>
+          </div>
+          <div class="creador-card">
+              <p>Donec dictum sed ut odio in risus eleifend consectetur suspendisse potenti nam dictum laoreet lectus.</p>
+              <div class="creador-info">
+                  <img src="IMAGENES/260658949d47f39d7349b2b10e3d84a5.jpg" alt="Foto de C. Doe">
+                  <div>
+                      <div class="creador-nombre">C. Doe</div>
+                      <div class="creador-titulo">Marketing / Nombre de la Compañía</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <button class="creador-button">Conoce Más</button>
+  </section>
+  
+
+
+    <section id="contacto" class="seccion-contacto py-5 bg-dark text-light">
+        <div class="container text-center">
+            <h2>Contacto</h2>
+            <p>Nos encantaría saber de ti. ¡Contáctanos!</p>
+            <button class="btn btn-outline-light">Contáctanos</button>
+        </div>
+    </section>
+
+
+    <footer class="py-3 bg-dark text-light text-center">
+        <p>&copy; 2024 Paraíso Gatuno. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+      function toggleInfo(element) {
+          // Alterna la clase "active" para mostrar/ocultar la información
+          element.classList.toggle("active");
+      }
+  </script>
+</body>
+
+</html>
